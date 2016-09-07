@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>跨域</title>
+	<style>
+		p {
+			font-size: 24px;
+			text-align: center;
+		}
+	</style>
+</head>
+<body>
+	<p id="txt">我是api.study.com域下的一个页面</p>
+	<script>
+		window.addEventListener('message', function(ev) {
+			document.getElementById('txt').style.color = ev.data;
+		});
+	</script>
+</body>
+</html>

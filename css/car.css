@@ -1,0 +1,327 @@
+body {
+    background-color: #f4f4f4;
+}
+
+header {
+    width: 100%;
+    height: 45px;
+    background: url(../images/header-bg.png);
+    background-size: 1px 45px;
+    position: static;
+}
+header a {
+    width: 44px;
+    height: 40px;
+    padding: 10px 12px;
+    position: absolute;
+    top: 0;
+    background-origin: content-box;
+    background-clip: content-box;
+}
+
+header .icon_back {
+    left: 0;
+    background-position: -20px 0;
+}
+
+header .icon_menu {
+    right: 0;
+    background-position: -60px 0;
+}
+
+header h3 {
+    padding: 0 45px;
+    width: 100%;
+    text-align: center;
+    font-weight: normal;
+    line-height: 45px;
+}
+
+/*安全提示*/
+.selftip {
+    width: 100%;
+    text-align: center;
+    line-height: 35px;
+    border-top: 1px solid #cccccc;
+    border-bottom: 1px solid #cccccc;
+    background-color: #fff;
+}
+
+.selftip p {
+    position: relative;
+    height: 35px;
+    display: inline-block;
+    padding-left: 23px;
+}
+
+.selftip p::before {
+    content: "";
+    height: 18px;
+    width: 18px;
+    background: url(../images/safe_icon.png) no-repeat;
+    background-size: 18px 18px;
+    position: absolute;
+    top: 8px;
+    left: 0px;
+}
+
+.shopping {
+    margin-top: 10px;
+    background-color: #fff;
+}
+
+.shopping .shopping-title {
+    height: 34px;
+    line-height: 34px;
+    position: relative;
+    border-top: 1px solid #cccccc;
+}
+
+/*公共的盒子*/
+.jd_check {
+    width: 40px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.jd_info {
+    padding-left: 40px;
+    width: 100%;
+    padding-right: 10px;
+}
+
+.shopping .check_box {
+    width: 40px;
+    height: 34px;
+    padding: 6px 10px;
+    background: url(../images/shop-icon.png);
+    background-size: 50px 100px;
+    background-clip: content-box;
+    background-origin: content-box;
+    position: absolute;
+}
+
+.shopping .check_box[checked] {
+    background-position: -25px 0;
+}
+
+/*内容部分*/
+.product {
+    position: relative;
+}
+
+.shopping-con .product .check_box {
+    position: absolute;
+}
+
+.shopping .shopping-title {
+    position: relative;
+}
+
+.shopping .shopping-title .jd_info {
+    position: relative;
+}
+
+.shopping .shopping-title .jd_logo {
+    background: url(../images/buy-logo.png);
+    width: 16px;
+    height: 14px;
+    background-size: 16px 14px;
+    position: absolute;
+    top: 10px;
+}
+
+.shopping .shopping-title .jd_name {
+    padding-left: 20px;
+    font-size: 14px;
+}
+
+.shopping .shopping-title .jd_tip {
+    float: right;
+    color: #d8505c;
+}
+
+/*商品内容部分*/
+.product {
+    height: 100px;
+    border-top: 1px solid #ccc;
+    padding-top: 10px;
+}
+
+.jd_info .product_img {
+    width: 80px;
+    height: 80px;
+    float: left;
+}
+
+.jd_info .product_img img {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.jd_info .product_info {
+    overflow: hidden;
+    padding-left: 10px;
+}
+
+.jd_info .product_info .name {
+    height: 30px;
+    line-height: 15px;
+    overflow: hidden;
+
+}
+
+.jd_info .product_info .price {
+    padding-top: 5px;
+    color: #d8505c;
+}
+
+.jd_info .product_info .option {
+
+}
+
+.jd_info .product_info .option span {
+    width: 36px;
+    height: 24px;
+    border: 1px solid #cccccc;
+    line-height: 24px;
+    text-align: center;
+    float: left;
+}
+
+.jd_info .product_info .option input {
+    width: 36px;
+    height: 24px;
+    border-top: 1px solid #cccccc;
+    border-bottom: 1px solid #cccccc;
+    float: left;
+}
+
+.jd_info .product_info .delete {
+    float: right;
+}
+
+.jd_info .product_info .delete .delete_up {
+    background: url(../images/delete_up.png);
+    width: 18px;
+    height: 5px;
+    background-size: 18px 5px;
+    display: block;
+    margin-left: -1px;
+    transition: all 1s;
+    transform-origin: left bottom;
+}
+
+.jd_info .product_info .delete .delete_down {
+    background: url(../images/delete_down.png);
+    width: 17px;
+    height: 18px;
+    background-size: 17px 18px;
+    display: block;
+    margin-top: -3px;
+}
+
+/*弹出层*/
+.jd_win {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+}
+
+.jd_win .jd_win_box {
+    position: relative;
+    left: 50%;
+    top: 50%;
+    width: 80%;
+    transform: translate3d(-50%, -50%, 0);
+    background-color: #fff;
+}
+
+.jd_win .jd_win_box .jd_win_box_title {
+    font-size: 20px;
+    text-align: center;
+    padding: 20px 5px;
+    border-bottom: 1px solid #ccc;
+}
+
+.jd_win .jd_win_box .jd_win_box_btn {
+    padding: 10px 10px;
+}
+
+.jd_win .jd_win_box .jd_win_box_btn a {
+    width: 45%;
+    height: 36px;
+    line-height: 36px;
+    border: 1px solid #ccc;
+    float: left;
+    text-align: center;
+    font-size: 15px;
+    border-radius: 5px;
+}
+
+.jd_win .jd_win_box .jd_win_box_btn .cancle {
+    margin-right: 10%;
+}
+
+/*定义动画*/
+@keyframes animates {
+    0% {
+        opacity: 0;
+        transform: translate3d(-50%, -1000%, 0);
+        weblitTransform: translate3d(-50%, -1000%, 0);
+    }
+    60% {
+        opacity: 1;
+        weblitTransform: translate3d(-50%, -55%, 0);
+        transform: translate3d(-50%, -55%, 0);
+    }
+    75% {
+        weblitTransform: translate3d(-50%, -48%, 0);
+        transform: translate3d(-50%, -48%, 0);
+    }
+    90% {
+        weblitTransform: translate3d(-50%, -52%, 0);
+        transform: translate3d(-50%, -52%, 0);
+    }
+    100% {
+        transform: translate3d(-50%, -50%, 0);
+        weblitTransform: translate3d(-50%, -50%, 0);
+
+    }
+}
+
+@-webkit-keyframes animates {
+    0% {
+        opacity: 0;
+        transform: translate3d(-50%, -1000%, 0);
+        weblitTransform: translate3d(-50%, -1000%, 0);
+    }
+    60% {
+        opacity: 1;
+        weblitTransform: translate3d(-50%, -55%, 0);
+        transform: translate3d(-50%, -55%, 0);
+    }
+    75% {
+        weblitTransform: translate3d(-50%, -48%, 0);
+        transform: translate3d(-50%, -48%, 0);
+    }
+    90% {
+        weblitTransform: translate3d(-50%, -52%, 0);
+        transform: translate3d(-50%, -52%, 0);
+    }
+    100% {
+        transform: translate3d(-50%, -50%, 0);
+        weblitTransform: translate3d(-50%, -50%, 0);
+
+    }
+}
+
+.animate {
+    animation: animates 1s;
+}

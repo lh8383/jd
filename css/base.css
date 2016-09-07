@@ -1,0 +1,66 @@
+/*重置默认样式*/
+/*匹配所有的元素包括伪类元素*/
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box; /*兼容移动端的主流浏览器*/
+    box-sizing: border-box;
+    /*清除移动端的点击高亮的效果*/
+    -webkit-tap-highlight-color: transparent; /*轻击*/
+}
+
+body {
+    font-size: 12px;
+    font-family: microsoft yahei, sans-serif;
+    /*移动端的默认字体*/
+    color: #333;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+a {
+    color: #333;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #333;
+}
+
+input[type="text"], input[type="search"], input[type="tel"], textarea {
+    border: 0 none;
+    outline-style: none;
+    resize: none; /*禁止textarea拖拽*/
+    /*清除默认阴影*/
+    -webkit-appearance: none; /*设置表单元素不自带浏览器的默认样式*/
+}
+
+/*公共样式*/
+.f_left {
+    float: left;
+}
+
+.f_right {
+    float: right;
+}
+
+.clearfix::before,
+.clearfix::after {
+    content: "";
+    display: block;
+    height: 0;
+    line-height: 0;
+    visibility: hidden;
+    clear: both;
+}
+[class^="icon_"]{
+    background-image: url(../images/sprites.png);
+    background-size:200px 200px;
+}
+.m-r10{
+    margin-right: 10px;
+}

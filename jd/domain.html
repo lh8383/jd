@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>跨域</title>
+	<style>
+		p {
+			font-size: 24px;
+			text-align: center;
+		}
+	</style>
+</head>
+<body>
+	<p id="txt">我是api.study.com域下的一个页面</p>
+	<script>
+		document.domain = 'study.com';
+		
+		// 访问父级
+		top.document.getElementsByTagName('p')[0].style.color = 'red';
+	</script>
+</body>
+</html>
